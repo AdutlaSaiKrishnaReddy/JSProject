@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="./Styles/admin.css" />
+  </head>
+
+  <body>
+    <form>
+      <h2>Create Event</h2>
+
+      <label for="eventName">Event Name</label>
+      <input
+        type="text"
+        id="eventName"
+        name="eventName"
+        placeholder="Enter event name"
+        required
+      />
+
+      <label for="eventLocation">Location</label>
+      <input
+        type="text"
+        id="eventLocation"
+        name="eventLocation"
+        placeholder="Enter event location"
+        required
+      />
+
+      <label for="eventDate">Event Date</label>
+      <input type="date" id="eventDate" name="eventDate" required />
+
+      <label for="eventTime">Event Time</label>
+      <input type="time" id="eventTime" name="eventTime" required />
+
+      <label for="price">Price</label>
+      <input
+        type="text"
+        id="price"
+        name="price"
+        placeholder="Enter price"
+        required
+      />
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="" disabled selected>Select category</option>
+        <option value="music">Music</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+        <option value="education">Education</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="image">Event Image URL</label>
+      <input
+        type="text"
+        id="image"
+        name="image"
+        placeholder="Enter image URL or path"
+        required
+      />
+
+      <button type="submit">Submit Event</button>
+    </form>
+
+    <h2 style="text-align: center; margin-top: 40px">All Events</h2>
+
+    <table id="events-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="JavaScript/admin.js"></script>
+  </body>
+</html>

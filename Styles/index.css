@@ -1,0 +1,790 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.specilaloffers {
+  width: 100%;
+  margin: 80px auto;
+  max-width: 1200px;
+}
+
+.specilaloffersheading {
+  font-size: 1.5em;
+}
+
+.specilaloffersitems {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* LEFT COLUMN (50%) */
+.leftEvents {
+  width: 50%;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 20px;
+}
+
+/* LEFT EVENT CARDS */
+.newintown1,
+.newintown2 {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.newintown1 > img,
+.newintown2 > img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.newintownbutton > button {
+  padding: 10px 20px;
+  background-color: #ff4b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newintownabout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newintownabout > h2,
+.newintownabout > p {
+  margin: 0;
+}
+
+.newintownprice {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.newintownprice > button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newintownprice > button:hover {
+  background-color: #ff3939;
+}
+
+.newintownitems {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.newintownitems .card {
+  flex: 0 0 calc(50% - 20px);
+  background-color: #fbf8f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+
+.newintownitems > .card > img {
+  width: 100%;
+}
+
+.newintownitems .card h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding: 10px 5px 0px;
+
+  text-align: justify;
+}
+
+.newintownitems .card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 6px 5px 0px 6px;
+}
+
+.newintownitems .card .card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.price-btn {
+  background-color: #ff4b4b;
+  color: white;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.add-cartbtn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  background-color: #fbf8f6;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.add-cartbtn:hover {
+  color: #ff3939;
+}
+
+.menu-banner {
+  /* border: 2px solid black; */
+  width: 95%;
+  height: auto;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-banner > .container1 {
+  display: flex;
+  flex-direction: row;
+  background-color: #191a1d;
+  background-image: url("https://cdn.evbstatic.com/s3-build/fe/build/images/3f96dddb80dd0a06eb9e5836cc641f33-generic_2_desktop.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.menu-banner > .container1 > .containertext {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 80px;
+
+  /* Gradient opacity background */
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 1),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.01)
+  );
+}
+
+.menu-banner > .container1 > .containertext > h1 {
+  font-size: 3em;
+  padding: 40px 0px 20px 0px;
+}
+
+.menu-banner > .container1 > .containertext > p {
+  padding: 20px 0px 20px 0px;
+}
+
+.menu-banner > .container1 > .containertext > .seemenu {
+  padding: 12px 30px;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: white;
+  background: none;
+  border: 2px solid whitesmoke;
+  border-radius: 40px;
+}
+
+.menu-banner > .container1 > .containertext > .seemenu > a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.menu-banner > .container1 > .containertext > .offer {
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: 900;
+  color: white;
+  background: #ff3939;
+  border: none;
+  border-radius: 12px;
+}
+
+.menu-banner > .container1 > .containertext > .seemenu:hover {
+  background-color: #ff3939;
+  border: none;
+}
+
+.menu-banner > .container2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #191a1d;
+  color: white;
+}
+
+.menu-banner > .container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #191a1d;
+  background-image: url("https://cdn.evbstatic.com/s3-build/fe/build/images/0ce18d7c82d043f3242149aabeae3a91-education.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.menu-banner > .container2 > .containertext {
+  width: 50%;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 80px;
+
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.01)
+  );
+}
+
+.menu-banner > .container2 > .containertext > h1 {
+  font-size: 3em;
+  padding: 40px 0px 20px 0px;
+}
+
+.menu-banner > .container2 > .containertext > p {
+  padding: 20px 0px 20px 0px;
+}
+
+.menu-banner > .container2 > .containertext > .seemenu {
+  padding: 12px 30px;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: white;
+  background: none;
+  border: 2px solid whitesmoke;
+  border-radius: 40px;
+}
+
+.menu-banner > .container2 > .containertext > .seemenu > a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.menu-banner > .container2 > .containertext > .offer {
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: 900;
+  color: white;
+  background: #ff3939;
+  border: none;
+  border-radius: 12px;
+}
+
+.menu-banner > .container2 > .containertext > .seemenu:hover {
+  background-color: #ff3939;
+  border: none;
+}
+
+.menu > .menuheading > h1 {
+  /* border: 2px solid red; */
+  width: 100%;
+  padding: 10px 50px;
+  font-size: 3em;
+}
+
+.menu > .menuitems {
+  width: 95%;
+  margin: 0px 30px 120px;
+  height: 500px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.menu > .menuitems > .burgersmenu {
+  /* border: 2px solid orange; */
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.burgersmenu > .card {
+  background-color: #fbf8f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+
+.menu > .menuitems > .burgersmenu > .card > img {
+  width: 100%;
+  height: 250px;
+}
+
+.menu > .menuitems > .burgersmenu > .card > h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding: 10px 5px 0px;
+
+  text-align: justify;
+}
+
+.menu > .menuitems > .burgersmenu > .card > p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 6px 5px 0px 6px;
+}
+
+.menu > .menuitems > .burgersmenu > .card > .card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.price-btn {
+  background-color: #ff4b4b;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.add-cartbtn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.add-cartbtn:hover {
+  color: #ff3c2a;
+}
+
+.reviews {
+  /* border: 4px solid black; */
+  width: 95%;
+  height: 120vh;
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.reviewsimg {
+  /* border: 2px solid red; */
+  width: 50%;
+  height: 120vh;
+}
+
+.reviewsimg > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.reviewstext {
+  /* border: 2px solid green; */
+  width: 50%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.reviewstext > h1 {
+  padding: 15px 0px;
+  font-size: 4em;
+}
+.reviewstext > h2 {
+  padding: 18px 0px;
+}
+
+.reviewstext > .client-no {
+  color: #ff3939;
+  font-weight: lighter;
+}
+
+.reviewstext > button {
+  padding: 10px 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.extraimages {
+  /* border: 2px solid black; */
+  width: 95%;
+  margin: 80px 40px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.extraimages > img {
+  width: 25%;
+  padding: 100px 0px;
+}
+
+.contactus {
+  /* border: 2px solid black; */
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 60px 0px;
+}
+
+.contactus > .contactustext {
+  /* border: 2px solid red; */
+  width: 30%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactus > .contactustext > h1 {
+  padding: 20px;
+}
+
+.contactus > .contactustext > p {
+  padding: 20px 40px;
+}
+.contactus > .contactustext > p > img {
+  padding: 20px;
+}
+
+.contactus > .contactusdetails {
+  /* border: 2px solid red; */
+  width: 30%;
+  height: 60vh;
+}
+
+.contactus > .submitdetails {
+  /* border: 2px solid red; */
+  width: 30%;
+  height: 60vh;
+}
+
+.contactusdetails {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.contactusdetails > h1 {
+  padding: 6px 20px;
+}
+
+.contactusdetails > p {
+  padding: 6px 20px;
+}
+
+.contactusdetails > p > .icon {
+  fill: #ff3939;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.submitdetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.submitdetails > input {
+  padding: 15px 30px;
+  font-size: 16px !important;
+  color: #515050 !important;
+  background-color: #f4f4f4 !important;
+  font-weight: bolder;
+  border-radius: 40px;
+  border: none;
+}
+
+.submitdetails > button {
+  padding: 15px 80px;
+  background-color: #ff3939;
+  color: #f4f4f4;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 40px;
+  border: none;
+}
+
+.submitdetails > button:hover {
+  background-color: #000;
+}
+
+.submitdetails > h1,
+input,
+button {
+  margin: 8px 0px;
+}
+
+.menu-banner,
+.menu,
+.reviews,
+.extraimages,
+.contactus {
+  width: 100%;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .banner .content {
+    width: 90%;
+    margin-bottom: 0;
+  }
+
+  .banner .content img {
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .aboutus {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .aboutustext {
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutusimg {
+    width: 100%;
+  }
+
+  .specilaloffersitems {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newintown {
+    width: 90%;
+  }
+
+  .menu-banner > .container1,
+  .menu-banner > .container2 {
+    flex-direction: column;
+  }
+
+  .menu-banner > .container1 > .containerimg,
+  .menu-banner > .container2 > .containerimg {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-banner > .container1 > .containertext,
+  .menu-banner > .container2 > .containertext {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .menu > .menuitems {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu > .menuitems > .burgersmenu {
+    width: 100%;
+  }
+
+  .menu > .menuitems > .burgersmenu > .card {
+    width: 90%;
+    margin: auto;
+  }
+
+  .reviews {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .reviewsimg,
+  .reviewstext {
+    width: 100%;
+    height: auto;
+  }
+
+  .reviewstext {
+    align-items: center;
+    text-align: center;
+  }
+
+  .extraimages {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .extraimages img {
+    width: 80%;
+    padding: 20px 0;
+  }
+
+  .contactus {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .contactus > .contactustext,
+  .contactus > .contactusdetails,
+  .contactus > .submitdetails {
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .submitdetails > input,
+  .submitdetails > button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner .content h2 {
+    font-size: 2em;
+  }
+
+  .banner .content .burger {
+    font-size: 4em;
+  }
+
+  .aboutustext > h1 {
+    font-size: 2em;
+  }
+
+  .menu-banner > .container1 > .containertext > h1,
+  .menu-banner > .container2 > .containertext > h1 {
+    font-size: 2em;
+  }
+
+  .reviewstext > h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .specilaloffersitems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newintown {
+    order: 1;
+    width: 90%;
+  }
+
+  .newintownitems {
+    order: 2;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .newintownitems .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newintownitems {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+
+form {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff7e6;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#events-table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+#events-table th,
+#events-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#events-table th {
+  background-color: #ff4b4b;
+  color: white;
+}
+
+#events-table button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+}
+
+#events-table button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+#events-table button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
