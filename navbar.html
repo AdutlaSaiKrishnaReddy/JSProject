@@ -8,23 +8,47 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <div class="heading">
-        <h3>EventSphere</h3>
+        <a href="\"><h3>EventSphere</h3></a>
       </div>
+
       <div class="searchBar">
-        <input type="text" placeholder="search here... " />
+        <input type="text" id="searchInput" placeholder="search here..." />
       </div>
-      <label for="menu" id="icon"><ion-icon name="menu"></ion-icon></label>
-      <input type="checkbox" class="menuinput" id="menu" />
-      <div class="navbar">
+
+      <button id="open-sidebar" aria-label="Open Menu">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+      <nav class="navbar" id="navbar">
         <ul>
+          <li class="close-li">
+            <button id="close-sidebar">
+              <ion-icon name="close"></ion-icon>
+            </button>
+          </li>
+
           <li><a href="./index.html#menuOffers">Trending Events</a></li>
           <li><a href="./events.html">Events</a></li>
-          <li><a href="./registered.html">My Events</a></li>
+
+          <li id="myEventsItem">
+            <a href="./registered.html">My Events</a>
+          </li>
+
           <li><a href="./index.html#contact">Contact</a></li>
+
+          <li id="loginItem">
+            <a href="./login.html">Login</a>
+          </li>
+
+          <li id="logoutItem" style="display: none">
+            <button id="logoutBtn">Logout</button>
+          </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
+
+    <div id="overlay"></div>
   </body>
 </html>

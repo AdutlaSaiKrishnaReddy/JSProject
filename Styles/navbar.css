@@ -5,114 +5,132 @@
   width: 100%;
   z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 20px;
-  /* padding: 10px; */
-  background-color: #b0afaf !important;
+  padding: 10px 20px;
+  background-color: #b0afaf;
 }
 
-.header > .heading {
+.heading > a {
   color: #e15320;
-}
-
-.header > #icon {
-  display: none;
-}
-
-.header > .menuinput {
-  display: none;
-}
-
-ul > li > a {
   text-decoration: none;
-  color: black;
-  display: inline-block;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
 }
 
-.navbar > ul {
+/* SEARCH BAR FIX */
+.searchBar {
+  flex: 1; /* take remaining space */
+  min-width: 0; /* 🔥 critical for flex on mobile */
+}
+
+.searchBar input {
+  width: 100%;
+  padding: 8px 14px;
+  border-radius: 40px;
+  border: none;
+  font-weight: bold;
+}
+
+/* ===== NAV ===== */
+.navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
   gap: 30px;
 }
 
-.navbar ul > li > a:hover {
+/* Make links hoverable with transform */
+.navbar a,
+#logoutItem button {
+  display: inline-block; /* necessary for transform to work */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover,
+#logoutItem button:hover {
   transform: translateY(-3px);
   color: red;
 }
 
-.searchBar > input {
-  padding: 10px 30px;
-  font-size: 16px !important;
-  color: #515050 !important;
-  background-color: #f4f4f4 !important;
-  font-weight: bolder;
-  border-radius: 40px;
-  border: none;
+/* ===== LOGOUT ITEM STYLE ===== */
+#logoutItem button {
+  all: unset; /* removes default button styles */
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s;
 }
 
-@media screen and (width < 600px) {
-  .header > #icon {
+#logoutItem button:hover {
+  transform: translateY(-3px);
+  color: red;
+}
+
+/* ===== BUTTONS ===== */
+#open-sidebar,
+#close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+/* ===== OVERLAY ===== */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 999;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 800px) {
+  .header {
+    justify-content: space-between;
+    flex-wrap: nowrap; /* keep single row */
+  }
+
+  .heading {
+    flex-shrink: 0;
+  }
+
+  .searchBar {
+    display: block; /* ✅ show search bar */
+  }
+
+  #open-sidebar {
     display: block;
-    cursor: pointer;
-    /* background-color: blue; */
-    padding: 5px;
-    border-radius: 5px;
-    z-index: 1001;
-    position: relative;
-    /* color: red; */
+    flex-shrink: 0;
   }
 
-  .header > .navbar {
-    display: none;
-    background-color: #9d9fa2;
-    width: 140px;
-    height: 260px;
-    position: absolute;
-    top: 55px;
-    right: 4px;
-    border-radius: 12px;
+  /* SIDEBAR */
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 180px;
+    height: 100vh;
+    background: #b0afaf;
+    padding-top: 20px;
+    transition: right 300ms ease;
+    z-index: 1000;
   }
 
-  .header > #menu:checked ~ .navbar {
-    display: flex;
+  .navbar.show {
+    right: 0;
   }
 
   .navbar ul {
-    list-style: none;
-    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    padding: 0px 12px;
-    margin-top: 110px;
+    align-items: center;
+    gap: 15px;
   }
 
-  .navbar li {
-    width: 150px;
-    text-align: center;
-  }
-
-  .navbar li a {
-    display: block;
-    text-decoration: none;
-    background-color: #f4f4f4;
-    color: black;
-    font-weight: 500;
-    padding: 10px 0;
-    border-radius: 8px;
-    margin-right: 30px;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease,
-      background-color 0.2s ease;
-  }
-
-  .navbar li a:hover {
-    background-color: #e0e0e0;
-    transform: translateY(-3px);
-    color: red;
+  .close-li {
+    align-self: flex-end;
+    padding-right: 10px;
   }
 }

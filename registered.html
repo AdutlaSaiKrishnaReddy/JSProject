@@ -6,19 +6,31 @@
     <title>Your Cart</title>
 
     <link rel="stylesheet" href="Styles/registered.css" />
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-    <style>
-      .header {
-        height: 40px !important;
-        padding: 10px 0px !important;
-      }
-    </style>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
 
   <body>
     <div id="nav-placeholder"></div>
 
-    <script src="Javascript/registered.js"></script>
+    <table id="events-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Auth guard first -->
+    <script src="./JavaScript/authGuard.js"></script>
+    <!-- Navbar logic -->
+    <script src="./JavaScript/navbar.js"></script>
+    <!-- Page specific JS -->
+    <script src="./JavaScript/registered.js"></script>
   </body>
 </html>

@@ -23,7 +23,7 @@ function displayTable(events) {
     let tr = document.createElement("tr");
 
     tr.innerHTML = `
-      <td>${event.id}</td>
+     
       <td>${event.name}</td>
       <td>${event.location}</td>
       <td>${event.date}</td>
@@ -31,19 +31,21 @@ function displayTable(events) {
       <td>₹ ${event.price}</td>
       <td>${event.category}</td>
       <td>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
+        <button class="edit-btn" id="editBtn-${event.id}">Edit</button>
+        <button class="delete-btn" id="deleteBtn-${event.id}">Delete</button>
       </td>
     `;
 
-    tr.querySelector(".edit-btn").addEventListener("click", () =>
+    tbody.appendChild(tr);
+    
+    
+    document.getElementById(`editBtn-${event.id}`).addEventListener("click", () =>
       editEvent(event.id)
     );
-    tr.querySelector(".delete-btn").addEventListener("click", () =>
+    document.getElementById(`deleteBtn-${event.id}`).addEventListener("click", () =>
       deleteEvent(event.id)
     );
 
-    tbody.appendChild(tr);
   });
 }
 
@@ -51,12 +53,6 @@ async function addEvent(eventData) {
   try {
     let method = editId ? "PUT" : "POST";
     let url = editId ? `${API_URL}/${editId}` : API_URL;
-
-    if (!editId) {
-      let events = await fetch(API_URL).then((res) => res.json());
-      eventData.id =
-        events.length === 0 ? 1 : Math.max(...events.map((e) => e.id)) + 1;
-    }
 
     let res = await fetch(url, {
       method,
@@ -75,12 +71,18 @@ async function addEvent(eventData) {
   }
 }
 
+
 async function editEvent(id) {
   let res = await fetch(`${API_URL}/${id}`);
+
+  if (!res.ok) {
+    alert("Event not found!");
+    return;
+  }
+
   let event = await res.json();
 
   editId = id;
-
   eventName.value = event.name;
   eventLocation.value = event.location;
   eventDate.value = event.date;
@@ -91,6 +93,7 @@ async function editEvent(id) {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
 
 async function deleteEvent(id) {
   if (!confirm("Are you sure you want to delete this event?")) return;
