@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/events";
+const API_URL = "/events";
 let allEvents = [];
 
 // Ensure user is logged in
@@ -10,7 +10,7 @@ if (!authUser) {
 // Wait for navbar to load, then init page
 async function initPage() {
   // 1️⃣ Load Navbar
-  const navbarRes = await fetch("./navbar.html");
+  const navbarRes = await fetch("/navbar.html");
   const navbarHTML = await navbarRes.text();
   document.getElementById("nav-placeholder").innerHTML = navbarHTML;
 
@@ -78,7 +78,7 @@ function registerEvent(event) {
     return;
   }
 
-  fetch("http://localhost:3000/registeredEvents", {
+  fetch("/registeredEvents", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...event, userEmail: authUser.email }),

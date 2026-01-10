@@ -1,4 +1,4 @@
-const REGISTERED_API = "http://localhost:3000/registeredEvents";
+const REGISTERED_API = "/registeredEvents";
 
 /* ---------- AUTH HELPER ---------- */
 function getAuthUser() {
@@ -6,7 +6,7 @@ function getAuthUser() {
 }
 
 /* ---------- LOAD NAVBAR ---------- */
-fetch("./navbar.html")
+fetch("/navbar.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("nav-placeholder").innerHTML = data;

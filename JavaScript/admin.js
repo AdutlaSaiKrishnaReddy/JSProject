@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/events";
+const API_URL = "/events";
 let editId = null;
 
 async function getEvents() {
@@ -37,15 +37,13 @@ function displayTable(events) {
     `;
 
     tbody.appendChild(tr);
-    
-    
-    document.getElementById(`editBtn-${event.id}`).addEventListener("click", () =>
-      editEvent(event.id)
-    );
-    document.getElementById(`deleteBtn-${event.id}`).addEventListener("click", () =>
-      deleteEvent(event.id)
-    );
 
+    document
+      .getElementById(`editBtn-${event.id}`)
+      .addEventListener("click", () => editEvent(event.id));
+    document
+      .getElementById(`deleteBtn-${event.id}`)
+      .addEventListener("click", () => deleteEvent(event.id));
   });
 }
 
@@ -71,7 +69,6 @@ async function addEvent(eventData) {
   }
 }
 
-
 async function editEvent(id) {
   let res = await fetch(`${API_URL}/${id}`);
 
@@ -93,7 +90,6 @@ async function editEvent(id) {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 
 async function deleteEvent(id) {
   if (!confirm("Are you sure you want to delete this event?")) return;
@@ -129,3 +125,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
 });
 
 getEvents();
+
+const authUser = JSON.parse(localStorage.getItem("authUser"));
+
+if (!authUser || authUser.role !== "ADMIN") {
+  alert("Access denied");
+  window.location.href = "login.html";
+}

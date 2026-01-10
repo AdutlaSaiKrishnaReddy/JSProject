@@ -30,7 +30,7 @@ loginBtn.addEventListener("click", () => {
   }
 });
 
-const API_URL = "http://localhost:3000/users";
+const API_URL = "/users";
 
 // SIGNUP FORM
 const signupForm = document.querySelector(".sign-up form");

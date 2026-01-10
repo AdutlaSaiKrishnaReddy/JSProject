@@ -1,6 +1,6 @@
-const REGISTERED_API = "http://localhost:3000/registeredEvents";
+const REGISTERED_API = "/registeredEvents";
 
-fetch("./navbar.html")
+fetch("/navbar.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("nav-placeholder").innerHTML = data;
