@@ -1,30 +1,30 @@
-import jsonServer from "json-server";
-import path from "path";
-import { fileURLToPath } from "url";
+const express = require("express");
+const jsonServer = require("json-server");
+const path = require("path");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-const server = jsonServer.create();
+// JSON Server setup
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
-const PORT = process.env.PORT || 3000;
+app.use(express.json());
+app.use(middlewares);
 
-// Middlewares
-server.use(middlewares);
-server.use(jsonServer.bodyParser);
+// Serve frontend
+app.use(express.static(path.join(__dirname, "public")));
 
-// Serve frontend files
-server.use(
-  jsonServer.defaults({
-    static: __dirname,
-  })
-);
+// APIs
+app.use("/events", router);
+app.use("/registeredEvents", router);
+app.use("/users", router);
 
-// API routes
-server.use(router);
+// SPA fallback
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
