@@ -16,9 +16,7 @@ app.use(middlewares);
 app.use(express.static(path.join(__dirname, "public")));
 
 // APIs
-app.use("/events", router);
-app.use("/registeredEvents", router);
-app.use("/users", router);
+app.use("/", router);
 
 // SPA fallback
 app.get("*", (req, res) => {
