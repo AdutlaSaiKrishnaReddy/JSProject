@@ -70,6 +70,22 @@
       "role": "USER",
       "createdAt": "2026-01-11T06:56:51.287Z",
       "id": 1
+    },
+    {
+      "name": "Adutla Sai",
+      "email": "saitej@gmail.com",
+      "password": "S3Jpc2huYUA5NjA3",
+      "role": "ADMIN",
+      "createdAt": "2026-01-11T07:54:15.217Z",
+      "id": 2
+    },
+    {
+      "name": "Adutla Sai amdin",
+      "email": "21000cseh@gmail.com",
+      "password": "S3Jpc2huYUA5NjA3",
+      "role": "ADMIN",
+      "createdAt": "2026-01-11T08:03:34.745Z",
+      "id": 3
     }
   ]
 }

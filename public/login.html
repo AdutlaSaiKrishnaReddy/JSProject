@@ -26,6 +26,12 @@
             ></a>
           </div>
           <span>or use your email for registeration</span>
+          <label>Account Type</label>
+          <select id="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+
           <input type="text" id="signupName" placeholder="Name" />
           <input type="email" id="signupEmail" placeholder="Email" />
           <input type="password" id="signupPassword" placeholder="Password" />
@@ -49,8 +55,18 @@
             ></a>
           </div>
           <span>or use your email password</span>
+          <label>Login As</label>
+          <select id="loginType">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+
           <input type="email" id="loginEmail" placeholder="Email" />
           <input type="password" id="loginPassword" placeholder="Password" />
+          <div id="otpBox" style="display: none">
+            <input type="text" id="otpInput" placeholder="Enter OTP" />
+            <button type="button" id="verifyOtp">Verify OTP</button>
+          </div>
           <button type="submit">Sign In</button>
           <p id="loginError" style="color: red; display: none">
             Invalid email or password
