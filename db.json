@@ -31,6 +31,45 @@
       "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&q=80"
     }
   ],
-  "registeredEvents": [],
-  "users": []
+  "registeredEvents": [
+    {
+      "id": "cc18",
+      "name": "Java Full Stack WorkShop",
+      "location": "Kurnool",
+      "date": "2026-01-15",
+      "time": "09:30",
+      "price": "60",
+      "category": "education",
+      "image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&q=80",
+      "userEmail": "saitej7396@gmail.com"
+    },
+    {
+      "name": "Masterclass on achieving financial freedom",
+      "location": "Hyderabad",
+      "date": "Jan 10",
+      "time": "2:00 PM",
+      "price": "Free",
+      "userEmail": "saitej7396@gmail.com",
+      "id": "0-hrcpW"
+    },
+    {
+      "name": "Borrow Against Your Investments",
+      "location": "Online",
+      "date": "Thu, Jan 22",
+      "time": "11:30 PM GMT+5:30",
+      "price": "9",
+      "userEmail": "saitej7396@gmail.com",
+      "id": "X7jk7YB"
+    }
+  ],
+  "users": [
+    {
+      "name": "Adutla Sai Krishna Reddy",
+      "email": "saitej7396@gmail.com",
+      "password": "S3Jpc2htYUA5NjA3",
+      "role": "USER",
+      "createdAt": "2026-01-11T06:56:51.287Z",
+      "id": 1
+    }
+  ]
 }

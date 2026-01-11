@@ -5,13 +5,20 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 #nav-placeholder {
   margin-bottom: 50px;
 }
 
 #events-table {
-  width: 95%;
-  margin: 70px 30px;
+  width: calc(100% - 40px); /* Prevent overflow */
+  max-width: 1200px; /* Optional for large screens */
+  margin: 70px auto; /* Center it */
   border-collapse: collapse;
   background: white;
 }
@@ -26,4 +33,9 @@
 #events-table th {
   background-color: #ff4b4b;
   color: white;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scroll ONLY if table must */
 }
